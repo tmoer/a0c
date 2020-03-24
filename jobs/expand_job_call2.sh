@@ -1,0 +1,1 @@
+python3 expand_jobs_over_games.py --job job_PM2.sh --games Pendulum-v0s MountainCarContinuous-v0 --hpsetup item1=n_mcts,seq1=1+5+10+25+50+100,item2=entropy_l,seq2=0.0+0.1+1.0,item3=temp,seq3=0.1+1.0+10.0,n_rep=5 --hp bound=beta,n_t=20000000,n_eps=500000,V_decision=max --item1 lr --seq1 0.01 0.001 0.0001 --item2 loss_type --seq2 count --item3 c --seq3 0.005 0.05 --slurm_mode short
