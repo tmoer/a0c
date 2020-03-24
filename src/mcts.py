@@ -126,6 +126,20 @@ class Action():
             self.Q = val
 
 def stable_normalizer(x,temp):
+    '''
+    x: list of integers
+    temp: scalar, in range [0,inf]
+    '''
+    if np.array(x).dim > 1:
+        raise Warning('x should be a 1D array, but received input with dimensions dimensions {}.' 
+                      'Flattened the array to proceed'.format(np.array(x).shape))
+    if len(x) == 0:
+        raise IndexError('x cannot be an empty vector')
+
+    if temp < 0:
+        raise ValueError('Temperature below 0 does not make sense for this normalization')
+    
+    
     x = x / np.max(x)
     return (x ** temp)/np.sum(x ** temp)
 

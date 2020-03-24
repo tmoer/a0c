@@ -14,20 +14,20 @@ from .wrappers.atari import ClipRewardWrapper
 
 # Register deterministic FrozenLakes
 from gym.envs.registration import register
-register(
-    id='FrozenLakeNotSlippery-v0',
-    entry_point='gym.envs.toy_text:FrozenLakeEnv',
-    kwargs={'map_name' : '4x4', 'is_slippery': False},
-    max_episode_steps=100,
-    reward_threshold=0.78, # optimum = .8196
-)
-register(
-    id='FrozenLakeNotSlippery-v1',
-    entry_point='gym.envs.toy_text:FrozenLakeEnv',
-    kwargs={'map_name' : '8x8', 'is_slippery': False},
-    max_episode_steps=100,
-    reward_threshold=0.78, # optimum = .8196
-)
+#register(
+#    id='FrozenLakeNotSlippery-v0',
+#    entry_point='gym.envs.toy_text:FrozenLakeEnv',
+#    kwargs={'map_name' : '4x4', 'is_slippery': False},
+#    max_episode_steps=100,
+#    reward_threshold=0.78, # optimum = .8196
+#)
+#register(
+#    id='FrozenLakeNotSlippery-v1',
+#    entry_point='gym.envs.toy_text:FrozenLakeEnv',
+#    kwargs={'map_name' : '8x8', 'is_slippery': False},
+#    max_episode_steps=100,
+#    reward_threshold=0.78, # optimum = .8196
+#)
 
 def get_base_env(env):
     ''' removes all wrappers '''
