@@ -127,19 +127,27 @@ class Action():
 
 def stable_normalizer(x,temp):
     '''
-    x: list of integers
+    Normalize vector. 
+    
+    Normalizes the values in x to sum to 1, where each value is first exponiated by temp, i.e.:
+        x^temp / sum(x^temp)
+    
+    Keyword arguments:
+    x: a list of integers
     temp: scalar, in range [0,inf]
     '''
-    if np.array(x).dim > 1:
-        raise Warning('x should be a 1D array, but received input with dimensions dimensions {}.' 
-                      'Flattened the array to proceed'.format(np.array(x).shape))
+    ## check assumptions
+    x = np.array(x)
+    if x.ndim > 1:
+        raise Warning('x should be a 1D array, but received input with dimensionality {}.' 
+                      'Flattened the array to proceed'.format(x.shape))
+        x = x.flatten()
     if len(x) == 0:
         raise IndexError('x cannot be an empty vector')
-
     if temp < 0:
         raise ValueError('Temperature below 0 does not make sense for this normalization')
-    
-    
+        
+    # compute
     x = x / np.max(x)
     return (x ** temp)/np.sum(x ** temp)
 
