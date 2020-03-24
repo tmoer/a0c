@@ -11,9 +11,9 @@ if __name__ == '__main__' and __package__ is None:
     sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
 import argparse
-from common.submit import submit
+from src.common.submit import submit
 
-from hps import get_hps,override_hps_settings
+from config.hps import get_hps,override_hps_settings
 from agent import agent        
         
 if __name__ == "__main__":   

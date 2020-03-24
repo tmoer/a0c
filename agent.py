@@ -22,14 +22,14 @@ from pprint import pformat
 #from pdb import set_trace
 
 # common package import
-from common.rl.make_game import make_game
-from common.submit import make_unique_subfolder
-from common.hps_setup import hps_to_dict
-from common.visualize import plot_single_experiment
-from common.putils import store_safely
+from src.common.rl.make_game import make_game
+from src.common.submit import make_unique_subfolder
+from src.common.hps_setup import hps_to_dict
+from src.common.visualize import plot_single_experiment
+from src.common.putils import store_safely
 
 # local imports
-from hps import get_hps,override_hps_settings
+from config.hps import get_hps,override_hps_settings
 from src.mcts import MCTS,display_info
 from src.network import Model,Database
 
