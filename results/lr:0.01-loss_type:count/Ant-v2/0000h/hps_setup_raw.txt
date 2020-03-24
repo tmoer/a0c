@@ -1,1 +1,0 @@
-cpu_per_task=2,distributed=False,game=Ant-v2,item1=n_mcts,item2=entropy_l,item3=temp,loop_hyper=False,mem_per_cpu=2048,n_jobs=16,n_rep=3,rep=0,seq1=50,seq2=0.01,seq3=0.1+1.0+10.0,slurm=False,slurm_qos=short,slurm_time=3:59:59
