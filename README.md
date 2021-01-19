@@ -1,7 +1,7 @@
-# cursus
+# A0C
 
-This project simulates the Alpha Zero algorithm for continuous action spaces (A0C)
-It has been instantiated as a trial version for a DE course offered by the TU Delft. 
+This project simulates the Alpha Zero algorithm for continuous action spaces (A0C). 
+The associated paper is available from here: https://arxiv.org/pdf/1805.09613.pdf
 
 ## Installation
 You can clone this project by running:
